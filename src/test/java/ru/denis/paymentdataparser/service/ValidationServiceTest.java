@@ -1,5 +1,6 @@
 package ru.denis.paymentdataparser.service;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -14,17 +15,20 @@ class ValidationServiceTest {
 
   @ParameterizedTest
   @MethodSource("correctOrderIdAndAmountDataProvider")
+  @DisplayName("validationService.validateFields(...): Тест с корректными параметрами")
   void validateCorrectFields(String orderId, String amount) {
     assertEquals(validationService.validateFields(orderId, amount), env.getProperty(VALID_DATA_PROPERTY));
   }
 
   @ParameterizedTest
   @MethodSource("wrongOrderIdAndAmountDataProvider")
+  @DisplayName("validationService.validateFields(...): Тест с НЕкорректными параметрами")
   void validateWrongFields(String orderId, String amount, String expectedResult) {
     assertEquals(validationService.validateFields(orderId, amount), expectedResult);
   }
 
   @Test
+  @DisplayName("validationService.getSuccessfullyString(...)")
   void getSuccessfullyString() {
     assertEquals(validationService.getSuccessfullyString(), env.getProperty(VALID_DATA_PROPERTY));
   }
