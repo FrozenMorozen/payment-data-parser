@@ -9,9 +9,7 @@ public class Main {
 
   public static void main(String[] args) {
     ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-    BusinessLauncher businessLauncher = context.getBean("businessLauncher", BusinessLauncherImpl.class);;
-//    String csvFileName = "inputData.csv";
-//    String jsonFileName = "inputData.json";
+    BusinessLauncher businessLauncher = context.getBean("businessLauncher", BusinessLauncherImpl.class);
     String csvFileName = args[0];
     String jsonFileName = args[1];
     businessLauncher.readInputData(csvFileName, jsonFileName)

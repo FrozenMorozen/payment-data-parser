@@ -70,10 +70,10 @@ public class PaymentReaderServiceImpl implements PaymentReaderService {
       return resultJsonModels;
 
     } catch (CsvValidationException e) {
-      // Все ошибки отловить здесь и писать их в экшен лог и return null;
+      // Все ошибки отловить здесь и писать их в экшен лог
       return Collections.emptyList();
     } catch (IOException e) {
-      // Все ошибки отловить здесь и писать их в экшен лог и return null;
+      // Все ошибки отловить здесь и писать их в экшен лог
       return Collections.emptyList();
     }
   }
