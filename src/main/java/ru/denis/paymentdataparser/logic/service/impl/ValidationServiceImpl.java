@@ -24,7 +24,7 @@ public class ValidationServiceImpl implements ValidationService {
     try {
       new BigDecimal(amount);
     } catch (NumberFormatException nfe) {
-      return MessageFormat.format(env.getProperty("wrong.amount.format"), amount);
+      return MessageFormat.format(env.getRequiredProperty("wrong.amount.format"), amount);
     }
     return null;
   }
@@ -33,7 +33,7 @@ public class ValidationServiceImpl implements ValidationService {
     try {
       Long.parseLong(orderId);
     } catch (NumberFormatException nfe) {
-      return MessageFormat.format(env.getProperty("wrong.orderId.format"), orderId);
+      return MessageFormat.format(env.getRequiredProperty("wrong.orderId.format"), orderId);
     }
     return null;
   }
