@@ -1,5 +1,17 @@
 # payment-data-parser
-Приложение парсинга данных о платежках и конвертирования результата в итоговый формат
+
+### Описание решения:
+Для запуска приложения(см. п. 3 описания задания) ипсользовать\
+`mvn clean install`
+
+Для расширения функциональности парсингом файлов другого формата(см. п. 9 описания задания)\
+1.) Добавить расширение нового файла в `src/main/resources/business.properties` настройка `allow.file.extensions`\
+2.) Добавить расширение нового файла в enum `ru/denis/paymentdataparser/logic/SupportingFileExtensions.java`\
+3.) Добавить обработчик для считывания данных из нового формата файла в `ru/denis/paymentdataparser/service/ResultJsonService.java`\
+4.) Сделать обертку для метода `List<ResultJsonModel> readAllPaymentRecords(String fileName)` 
+в `ru/denis/paymentdataparser/logic/service/impl/PaymentReaderServiceImpl.java` с вызовом чтения данных из файла нового формата
+
+**Требование про многопоточность не выполнено**
 
 ### Описание задания:
 Необходимо разработать приложение парсинга входящих данных и конвертирования результат парсинга в результирующий формат.

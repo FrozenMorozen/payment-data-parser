@@ -1,10 +1,16 @@
 package ru.denis.paymentdataparser.service;
 
-
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 
-public interface BisinessLauncher {
-  List<String> handleInputData(String csvFilename, String jsonFileName) throws Exception;
+/**
+ * Сервис для запуска бизнес логики приложения
+ */
+public interface BusinessLauncher {
+
+  /**
+   * Считать данные о платежах из списка файлов
+   * @param filenames список файлов
+   * @return список строк, представляющих результат обработанных платежей из файлов
+   */
+  List<String> readInputData(String ... filenames);
 }

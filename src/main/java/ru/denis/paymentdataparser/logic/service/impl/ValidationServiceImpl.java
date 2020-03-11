@@ -4,19 +4,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
-import ru.denis.paymentdataparser.service.ValidationServcie;
+import ru.denis.paymentdataparser.service.ValidationService;
 
 import java.math.BigDecimal;
 import java.text.MessageFormat;
 
 @Service
 @PropertySource(value = "classpath:validation.properties", encoding = "UTF-8")
-public class ValidationServcieImpl implements ValidationServcie {
+public class ValidationServiceImpl implements ValidationService {
 
   private Environment env;
 
   @Autowired
-  public ValidationServcieImpl(Environment env) {
+  public ValidationServiceImpl(Environment env) {
     this.env = env;
   }
 

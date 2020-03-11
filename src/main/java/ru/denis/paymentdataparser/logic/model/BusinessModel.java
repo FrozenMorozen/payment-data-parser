@@ -1,7 +1,7 @@
-package ru.denis.paymentdataparser.service;
+package ru.denis.paymentdataparser.logic.model;
 
 /**
- * Маркер
+ * Маркер для моделей бизнес логики приложения
  */
 public interface BusinessModel {
 }

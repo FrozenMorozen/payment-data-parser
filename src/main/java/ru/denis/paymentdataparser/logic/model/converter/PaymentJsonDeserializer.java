@@ -1,13 +1,10 @@
-package ru.denis.paymentdataparser.logic.model;
+package ru.denis.paymentdataparser.logic.model.converter;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
-import com.fasterxml.jackson.databind.node.IntNode;
-import org.springframework.beans.factory.annotation.Autowired;
-import ru.denis.paymentdataparser.service.ValidationServcie;
 
 import java.io.IOException;
 

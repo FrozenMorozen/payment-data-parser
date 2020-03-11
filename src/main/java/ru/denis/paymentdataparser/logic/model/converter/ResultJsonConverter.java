@@ -1,5 +1,6 @@
-package ru.denis.paymentdataparser.service;
+package ru.denis.paymentdataparser.logic.model.converter;
 
+import ru.denis.paymentdataparser.logic.model.BusinessModel;
 import ru.denis.paymentdataparser.logic.model.ResultJsonModel;
 
 public interface ResultJsonConverter<T extends BusinessModel> {

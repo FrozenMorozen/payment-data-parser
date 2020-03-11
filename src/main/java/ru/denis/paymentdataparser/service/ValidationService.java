@@ -1,6 +1,9 @@
 package ru.denis.paymentdataparser.service;
 
-public interface ValidationServcie {
+/**
+ * Сервис валидации
+ */
+public interface ValidationService {
 
   /**
    * Проверить поля

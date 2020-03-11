@@ -1,8 +1,9 @@
-package ru.denis.paymentdataparser.logic.model.converter;
+package ru.denis.paymentdataparser.logic.model.converter.impl;
 
 import org.springframework.stereotype.Service;
 import ru.denis.paymentdataparser.logic.model.PaymentModel;
 import ru.denis.paymentdataparser.logic.model.ResultJsonModel;
+import ru.denis.paymentdataparser.logic.model.converter.ResultJsonConverter;
 
 @Service
 public class ResultJsonConverterImpl implements ResultJsonConverter<PaymentModel> {

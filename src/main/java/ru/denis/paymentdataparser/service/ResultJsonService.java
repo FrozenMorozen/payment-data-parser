@@ -1,13 +1,23 @@
 package ru.denis.paymentdataparser.service;
 
-import ru.denis.paymentdataparser.logic.model.PaymentCsvModel;
-import ru.denis.paymentdataparser.logic.model.PaymentJsonModel;
+import com.opencsv.exceptions.CsvValidationException;
 import ru.denis.paymentdataparser.logic.model.ResultJsonModel;
 
-public interface ValidationServcie {
+import java.io.IOException;
+import java.util.List;
 
-  String createResultStringForRecord(String orderId, String amount);
+/**
+ * Сервис для агрегирования данными о платежах в json формат
+ */
+public interface ResultJsonService {
 
-  ResultJsonModel getResultJsonForRecordFields(String[] recordFields);
+  /**
+   * Получить агрегированный json для csv файла
+   */
+  List<ResultJsonModel> getResultJsonForCsvFile(String filename) throws IOException, CsvValidationException;
 
+  /**
+   * Получить агрегированный json для json файла
+   */
+  List<ResultJsonModel> getResultJsonForJsonFile(String filename) throws IOException;
 }

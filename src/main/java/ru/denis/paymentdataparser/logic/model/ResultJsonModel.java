@@ -1,7 +1,7 @@
-package ru.denis.paymentdataparser.logic;
+package ru.denis.paymentdataparser.logic.model;
 
+import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 import java.math.BigDecimal;
 
@@ -9,14 +9,12 @@ import java.math.BigDecimal;
  * Модель для агрегирования результатов парсинга/конвертирования
  */
 @Setter
-@ToString
+@Getter
 public class ResultJsonModel {
-
   Long id;
   BigDecimal amount;
   String comment;
   String filename;
   Long line;
   String result;
-
 }

@@ -7,7 +7,7 @@ import ru.denis.paymentdataparser.logic.model.converter.BusinessModelConverter;
 import java.math.BigDecimal;
 
 @Service
-public class SimpleConverterImpl implements BusinessModelConverter<String[], PaymentModel> {
+public class PaymentModelConverterImpl implements BusinessModelConverter<String[], PaymentModel> {
 
   @Override
   public PaymentModel convert(String[] source) {
