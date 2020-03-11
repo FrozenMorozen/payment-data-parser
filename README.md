@@ -1,8 +1,10 @@
 # payment-data-parser
 
 ### Описание решения:
-Для запуска приложения(см. п. 3 описания задания) ипсользовать\
-`mvn clean install`
+Для запуска приложения ипсользовать\
+`java -jar target/payment-data-parser-1.0-SNAPSHOT.jar`\
+для пересборки(см. п. 3 описания задания) и запуска\
+`mvn clean install && clear && java -jar target/payment-data-parser-1.0-SNAPSHOT.jar`
 
 Для расширения функциональности парсингом файлов другого формата(см. п. 9 описания задания)\
 1.) Добавить расширение нового файла в `src/main/resources/business.properties` настройка `allow.file.extensions`\
